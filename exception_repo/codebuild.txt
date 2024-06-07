@@ -1,0 +1,241 @@
+[Container] 2024/06/06 18:08:30.435292 Running on CodeBuild On-demand
+[Container] 2024/06/06 18:08:30.435307 Waiting for agent ping
+[Container] 2024/06/06 18:08:30.636823 Waiting for DOWNLOAD_SOURCE
+[Container] 2024/06/06 18:08:36.090389 Phase is DOWNLOAD_SOURCE
+[Container] 2024/06/06 18:08:36.091763 CODEBUILD_SRC_DIR=/codebuild/output/src3117829106/src/git-codecommit.us-east-1.amazonaws.com/v1/repos/unused_workshop_repo
+[Container] 2024/06/06 18:08:36.092246 YAML location is /codebuild/readonly/buildspec.yml
+[Container] 2024/06/06 18:08:36.094059 Not setting HTTP client timeout for source type codecommit
+[Container] 2024/06/06 18:08:36.094156 Processing environment variables
+[Container] 2024/06/06 18:08:36.311638 No runtime version selected in buildspec.
+[Container] 2024/06/06 18:08:36.377067 Moving to directory /codebuild/output/src3117829106/src/git-codecommit.us-east-1.amazonaws.com/v1/repos/unused_workshop_repo
+[Container] 2024/06/06 18:08:36.380243 Unable to initialize cache download: no paths specified to be cached
+[Container] 2024/06/06 18:08:36.456215 Configuring ssm agent with target id: codebuild:3168c034-1a2a-46eb-b48a-4c3d69b04565
+[Container] 2024/06/06 18:08:36.489737 Successfully updated ssm agent configuration
+[Container] 2024/06/06 18:08:36.490117 Registering with agent
+[Container] 2024/06/06 18:08:36.525659 Phases found in YAML: 2
+[Container] 2024/06/06 18:08:36.525805  BUILD: 26 commands
+[Container] 2024/06/06 18:08:36.525813  INSTALL: 4 commands
+[Container] 2024/06/06 18:08:36.526131 Phase complete: DOWNLOAD_SOURCE State: SUCCEEDED
+[Container] 2024/06/06 18:08:36.526144 Phase context status code:  Message: 
+[Container] 2024/06/06 18:08:36.590975 Entering phase INSTALL
+[Container] 2024/06/06 18:08:36.591470 Running command curl https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip -o awscliv2.zip
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 57.9M  100 57.9M    0     0   377M      0 --:--:-- --:--:-- --:--:--  378M
+[Container] 2024/06/06 18:08:36.802089 Running command unzip awscliv2.zip > /dev/null 2>&1
+[Container] 2024/06/06 18:08:38.624450 Running command sudo ./aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli --update
+You can now run: /usr/local/bin/aws --version
+[Container] 2024/06/06 18:08:43.114923 Running command export PATH=/usr/local/bin:$PATH
+[Container] 2024/06/06 18:08:43.125907 Phase complete: INSTALL State: SUCCEEDED
+[Container] 2024/06/06 18:08:43.125927 Phase context status code:  Message: 
+[Container] 2024/06/06 18:08:43.158261 Entering phase PRE_BUILD
+[Container] 2024/06/06 18:08:43.160674 Phase complete: PRE_BUILD State: SUCCEEDED
+[Container] 2024/06/06 18:08:43.160689 Phase context status code:  Message: 
+[Container] 2024/06/06 18:08:43.195111 Entering phase BUILD
+[Container] 2024/06/06 18:08:43.195789 Running command echo $PATH
+/usr/local/bin:/root/.dotnet/:/root/.dotnet/tools/:/root/.goenv/shims:/root/.goenv/bin:/go/bin:/root/.phpenv/shims:/root/.phpenv/bin:/root/.pyenv/shims:/root/.pyenv/bin:/root/.rbenv/shims:/usr/local/rbenv/bin:/usr/local/rbenv/shims:/usr/local/bin/sbt/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/codebuild/user/bin
+[Container] 2024/06/06 18:08:43.205992 Running command echo $AWS_REGION
+us-east-1
+[Container] 2024/06/06 18:08:43.220138 Running command echo $AWS_ACCOUNT_ID
+111122223333
+[Container] 2024/06/06 18:08:43.241935 Running command echo $BUCKET
+unusedworkshopstack-allpurposes3bucketdbebdfd9-ivhh3pon76ob
+[Container] 2024/06/06 18:08:43.252986 Running command echo $KEY
+allowlist.txt
+[Container] 2024/06/06 18:08:43.269331 Running command echo $ANALYZER_NAME
+unused-workshop-analyzer
+[Container] 2024/06/06 18:08:43.297731 Running command echo $ANALYZER_ARN
+arn:aws:access-analyzer:us-east-1:111122223333:analyzer/unused-workshop-analyzer
+[Container] 2024/06/06 18:08:43.307707 Running command aws sts get-caller-identity
+{
+    "UserId": "AROAT4OAKCWR5NAWKSOWT:AWSCodeBuild-3168c034-1a2a-46eb-b48a-4c3d69b04565",
+    "Account": "111122223333",
+    "Arn": "arn:aws:sts::111122223333:assumed-role/UnusedWorkshopStack-ManageExceptionListRoleB2E3A625-R2eJtnLn6j43/AWSCodeBuild-3168c034-1a2a-46eb-b48a-4c3d69b04565"
+}
+[Container] 2024/06/06 18:08:43.939525 Running command aws --version
+aws-cli/2.16.2 Python/3.11.8 Linux/4.14.291-218.527.amzn2.x86_64 exec-env/AWS_ECS_EC2 exe/x86_64.amzn.2023
+[Container] 2024/06/06 18:08:44.461780 Running command ls -lah
+total 58M
+drwxr-xr-x 4 root root  212 Jun  6 18:08 .
+drwxr-xr-x 3 root root   34 Jun  6 18:08 ..
+drwxr-xr-x 8 root root  162 Jun  6 18:08 .git
+-rw-r--r-- 1 root root 5.1K Jun  6 18:08 .gitignore
+-rw-r--r-- 1 root root  841 Jun  6 18:08 allowlist.txt
+drwxr-xr-x 3 root root   78 Jun  5 18:18 aws
+-rw-r--r-- 1 root root  58M Jun  6 18:08 awscliv2.zip
+-rw-r--r-- 1 root root 2.4K Jun  6 18:08 cleanup.sh
+-rw-r--r-- 1 root root 8.4K Jun  6 18:08 codebuild.txt
+-rw-r--r-- 1 root root  764 Jun  6 18:08 prepare_cloudshell.sh
+-rw-r--r-- 1 root root   43 Jun  6 18:08 requirements.txt
+-rwxr-xr-x 1 root root  602 Jun  6 18:08 update_exception_list.sh
+[Container] 2024/06/06 18:08:44.494624 Running command aws s3api get-object --bucket ${BUCKET} --key ${KEY} from_s3_${KEY}
+{
+    "AcceptRanges": "bytes",
+    "LastModified": "2024-06-04T23:09:33+00:00",
+    "ContentLength": 322,
+    "ETag": "\"2206d899e53aa1dde204c5f3fade9b6b\"",
+    "ContentType": "binary/octet-stream",
+    "ServerSideEncryption": "AES256",
+    "Metadata": {}
+}
+[Container] 2024/06/06 18:08:45.279887 Running command cat from_s3_$KEY
+arn:aws:iam::111122223333:role/Admin
+arn:aws:iam::111122223333:role/LambdaCustomResourceRole
+arn:aws:iam::111122223333:role/SecurityTeamRolearn:aws:iam::123456789012:user/olivia
+arn:aws:iam::111122223333:role/UnusedWorkshopStack-LambdaUnusedAccessRoleD441C969-1zLAuaR9V50U
+arn:aws:iam::111122223333:role/WSParticipantRole
+[Container] 2024/06/06 18:08:45.301145 Running command cat $KEY
+arn:aws:iam::123456789012:user/olivia
+arn:aws:iam::111122223333:role/Admin
+arn:aws:iam::111122223333:role/LambdaCustomResourceRole
+arn:aws:iam::111122223333:role/SecurityTeamRolearn:aws:iam::123456789012:user/olivia
+arn:aws:iam::111122223333:role/UnusedWorkshopStack-LambdaUnusedAccessRoleD441C969-1zLAuaR9V50U
+arn:aws:iam::111122223333:role/WSParticipantRole
+arn:aws:iam::111122223333:role/UnusedWorkshopStack-ManageExceptionListPipelineBuil-A4qSsIpb3HPf
+arn:aws:iam::111122223333:role/UnusedWorkshopStack-ManageExceptionListPipelineEven-8IPiF1zz6a85
+arn:aws:iam::111122223333:role/UnusedWorkshopStack-ManageExceptionListPipelineRole-9bgmKIYYmLwE
+arn:aws:iam::111122223333:role/UnusedWorkshopStack-ManageExceptionListPipelineSour-KKjknay6qcZD
+arn:aws:iam::111122223333:role/UnusedWorkshopStack-ManageExceptionListRoleB2E3A625-R2eJtnLn6j43
+[Container] 2024/06/06 18:08:45.324501 Running command aws accessanalyzer list-analyzers
+{
+    "analyzers": [
+        {
+            "arn": "arn:aws:access-analyzer:us-east-1:111122223333:analyzer/unused-workshop-analyzer",
+            "name": "unused-workshop-analyzer",
+            "type": "ACCOUNT_UNUSED_ACCESS",
+            "createdAt": "2024-06-06T00:57:04+00:00",
+            "tags": {},
+            "status": "ACTIVE"
+        }
+    ]
+}
+[Container] 2024/06/06 18:08:45.968419 Running command aws accessanalyzer list-archive-rules --analyzer-name $ANALYZER_NAME
+{
+    "archiveRules": []
+}
+[Container] 2024/06/06 18:08:46.616322 Running command comm -13 <(sort from_s3_$KEY) <(sort $KEY) > arns
+[Container] 2024/06/06 18:08:46.625918 Running command cat arns
+arn:aws:iam::123456789012:user/olivia
+arn:aws:iam::111122223333:role/UnusedWorkshopStack-ManageExceptionListPipelineBuil-A4qSsIpb3HPf
+arn:aws:iam::111122223333:role/UnusedWorkshopStack-ManageExceptionListPipelineEven-8IPiF1zz6a85
+arn:aws:iam::111122223333:role/UnusedWorkshopStack-ManageExceptionListPipelineRole-9bgmKIYYmLwE
+arn:aws:iam::111122223333:role/UnusedWorkshopStack-ManageExceptionListPipelineSour-KKjknay6qcZD
+arn:aws:iam::111122223333:role/UnusedWorkshopStack-ManageExceptionListRoleB2E3A625-R2eJtnLn6j43
+[Container] 2024/06/06 18:08:46.633136 Running command arns_list=$(cat arns)
+[Container] 2024/06/06 18:08:46.639864 Running command echo $arns_list
+arn:aws:iam::123456789012:user/olivia arn:aws:iam::111122223333:role/UnusedWorkshopStack-ManageExceptionListPipelineBuil-A4qSsIpb3HPf arn:aws:iam::111122223333:role/UnusedWorkshopStack-ManageExceptionListPipelineEven-8IPiF1zz6a85 arn:aws:iam::111122223333:role/UnusedWorkshopStack-ManageExceptionListPipelineRole-9bgmKIYYmLwE arn:aws:iam::111122223333:role/UnusedWorkshopStack-ManageExceptionListPipelineSour-KKjknay6qcZD arn:aws:iam::111122223333:role/UnusedWorkshopStack-ManageExceptionListRoleB2E3A625-R2eJtnLn6j43
+[Container] 2024/06/06 18:08:46.645655 Running command for arn in $arns_list; do RULE_NAME=$(echo $arn | cut -d'/' -f2 ); FILTER=$(jq -n -c --arg arn "$arn" '{resource: {eq: [$arn]}}'); aws accessanalyzer create-archive-rule --analyzer-name $ANALYZER_NAME --rule-name $RULE_NAME --filter $FILTER; done
+[Container] 2024/06/06 18:08:50.669399 Running command for arn in $arns_list; do RULE_NAME=$(echo $arn | cut -d'/' -f2 ); aws accessanalyzer apply-archive-rule --analyzer-arn $ANALYZER_ARN --rule-name $RULE_NAME; done
+[Container] 2024/06/06 18:08:54.656915 Running command aws accessanalyzer list-archive-rules --analyzer-name $ANALYZER_NAME
+{
+    "archiveRules": [
+        {
+            "ruleName": "UnusedWorkshopStack-ManageExceptionListPipelineBuil-A4qSsIpb3HPf",
+            "filter": {
+                "resource": {
+                    "eq": [
+                        "arn:aws:iam::111122223333:role/UnusedWorkshopStack-ManageExceptionListPipelineBuil-A4qSsIpb3HPf"
+                    ]
+                }
+            },
+            "createdAt": "2024-06-06T18:08:48+00:00",
+            "updatedAt": "2024-06-06T18:08:48+00:00"
+        },
+        {
+            "ruleName": "UnusedWorkshopStack-ManageExceptionListPipelineEven-8IPiF1zz6a85",
+            "filter": {
+                "resource": {
+                    "eq": [
+                        "arn:aws:iam::111122223333:role/UnusedWorkshopStack-ManageExceptionListPipelineEven-8IPiF1zz6a85"
+                    ]
+                }
+            },
+            "createdAt": "2024-06-06T18:08:48+00:00",
+            "updatedAt": "2024-06-06T18:08:48+00:00"
+        },
+        {
+            "ruleName": "UnusedWorkshopStack-ManageExceptionListPipelineRole-9bgmKIYYmLwE",
+            "filter": {
+                "resource": {
+                    "eq": [
+                        "arn:aws:iam::111122223333:role/UnusedWorkshopStack-ManageExceptionListPipelineRole-9bgmKIYYmLwE"
+                    ]
+                }
+            },
+            "createdAt": "2024-06-06T18:08:49+00:00",
+            "updatedAt": "2024-06-06T18:08:49+00:00"
+        },
+        {
+            "ruleName": "UnusedWorkshopStack-ManageExceptionListPipelineSour-KKjknay6qcZD",
+            "filter": {
+                "resource": {
+                    "eq": [
+                        "arn:aws:iam::111122223333:role/UnusedWorkshopStack-ManageExceptionListPipelineSour-KKjknay6qcZD"
+                    ]
+                }
+            },
+            "createdAt": "2024-06-06T18:08:49+00:00",
+            "updatedAt": "2024-06-06T18:08:49+00:00"
+        },
+        {
+            "ruleName": "UnusedWorkshopStack-ManageExceptionListRoleB2E3A625-R2eJtnLn6j43",
+            "filter": {
+                "resource": {
+                    "eq": [
+                        "arn:aws:iam::111122223333:role/UnusedWorkshopStack-ManageExceptionListRoleB2E3A625-R2eJtnLn6j43"
+                    ]
+                }
+            },
+            "createdAt": "2024-06-06T18:08:50+00:00",
+            "updatedAt": "2024-06-06T18:08:50+00:00"
+        },
+        {
+            "ruleName": "olivia",
+            "filter": {
+                "resource": {
+                    "eq": [
+                        "arn:aws:iam::123456789012:user/olivia"
+                    ]
+                }
+            },
+            "createdAt": "2024-06-06T18:08:47+00:00",
+            "updatedAt": "2024-06-06T18:08:47+00:00"
+        }
+    ]
+}
+[Container] 2024/06/06 18:08:55.290838 Running command cat ${KEY} >> from_s3_${KEY}
+[Container] 2024/06/06 18:08:55.298087 Running command cat from_s3_${KEY} | sort | uniq | sort > ${KEY}
+[Container] 2024/06/06 18:08:55.309096 Running command cat ${KEY}
+arn:aws:iam::123456789012:user/olivia
+arn:aws:iam::111122223333:role/Admin
+arn:aws:iam::111122223333:role/LambdaCustomResourceRole
+arn:aws:iam::111122223333:role/SecurityTeamRolearn:aws:iam::123456789012:user/olivia
+arn:aws:iam::111122223333:role/UnusedWorkshopStack-LambdaUnusedAccessRoleD441C969-1zLAuaR9V50U
+arn:aws:iam::111122223333:role/UnusedWorkshopStack-ManageExceptionListPipelineBuil-A4qSsIpb3HPf
+arn:aws:iam::111122223333:role/UnusedWorkshopStack-ManageExceptionListPipelineEven-8IPiF1zz6a85
+arn:aws:iam::111122223333:role/UnusedWorkshopStack-ManageExceptionListPipelineRole-9bgmKIYYmLwE
+arn:aws:iam::111122223333:role/UnusedWorkshopStack-ManageExceptionListPipelineSour-KKjknay6qcZD
+arn:aws:iam::111122223333:role/UnusedWorkshopStack-ManageExceptionListRoleB2E3A625-R2eJtnLn6j43
+arn:aws:iam::111122223333:role/WSParticipantRole
+[Container] 2024/06/06 18:08:55.316127 Running command aws s3api put-object --bucket ${BUCKET} --key ${KEY} --body ${KEY}
+{
+    "ETag": "\"559bb36e1d65ddd9dc0f6475c4605f1a\"",
+    "ServerSideEncryption": "AES256"
+}
+[Container] 2024/06/06 18:08:55.977982 Phase complete: BUILD State: SUCCEEDED
+[Container] 2024/06/06 18:08:55.978014 Phase context status code:  Message: 
+[Container] 2024/06/06 18:08:56.011586 Entering phase POST_BUILD
+[Container] 2024/06/06 18:08:56.013124 Phase complete: POST_BUILD State: SUCCEEDED
+[Container] 2024/06/06 18:08:56.013139 Phase context status code:  Message: 
+[Container] 2024/06/06 18:08:56.062078 Set report auto-discover timeout to 5 seconds
+[Container] 2024/06/06 18:08:56.062109 Expanding base directory path:  .
+[Container] 2024/06/06 18:08:56.065324 Assembling file list
+[Container] 2024/06/06 18:08:56.065342 Expanding .
+[Container] 2024/06/06 18:08:56.068549 Expanding file paths for base directory .
+[Container] 2024/06/06 18:08:56.068564 Assembling file list
+[Container] 2024/06/06 18:08:56.068568 Expanding **/*
+[Container] 2024/06/06 18:08:56.104899 No matching auto-discover report paths found
+[Container] 2024/06/06 18:08:56.105342 Report auto-discover file discovery took 0.043263 seconds
+[Container] 2024/06/06 18:08:56.105473 Phase complete: UPLOAD_ARTIFACTS State: SUCCEEDED
+[Container] 2024/06/06 18:08:56.105561 Phase context status code:  Message: 

@@ -1,0 +1,11 @@
+{
+  "name": "aws-iam-refining-policy-permissions",
+  "version": "1",
+  "description": "re:Inforce 2024",
+  "main": "setup.js",
+  "author": "AWS Professional Services",
+  "license": "MIT-0",
+  "dependencies": {
+    "aws-cdk": "2.144.0"
+  }
+}
