@@ -25,6 +25,7 @@ unused_access_exception_list_principal_arns = [
     admin_role_exception,
     workshop_lambda_custom_exception,
     workshop_lambda_unused_exception,
+    "\n"
 ]
 
 
