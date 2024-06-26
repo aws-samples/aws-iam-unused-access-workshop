@@ -3,7 +3,7 @@
 
 # Unleash the power of IAM Access Analyzer Unused Access
 
-This project is part of the workshop [Unleash the power of IAM Access Analyzer Unused Access](https://catalog.workshops.aws/unleash-the-power-of-IAM-Access-Analyzer-Unused-Access). Follow the workshop directions for optimal use of this repository contents.
+This project is part of the workshop [Unleash the power of IAM Access Analyzer Unused Access](https://catalog.workshops.aws/unleash-the-power-of-iam-access-analyzer-unused-access). Follow the workshop directions for optimal use of this repository contents.
 
 ***DO NOT DEPLOY THE CODE FROM THIS REPOSITORY IN AN EXISTING AWS ACCOUNT YOU CURRENTLY USE. CREATE A NEW SANDBOX ACCOUNT FOR THE PURPOSE OF THIS WORKSHOP.***
 
